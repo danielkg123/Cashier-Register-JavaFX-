@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyekpbo.AdminController">
+    <top>
+        <MenuBar prefWidth="600.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Menu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onPelangganClick" text="Add Customer" />
+                        <MenuItem mnemonicParsing="false" onAction="#onProdukCLick" text="Add Product" />
+                        <MenuItem mnemonicParsing="false" onAction="#onStaffClick" text="Staff List" />
+                        <MenuItem mnemonicParsing="false" onAction="#onLogOutClick" text="Log Out" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="375.0" prefWidth="201.0" style="-fx-background-color: #D2042D;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="18.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Summary">
+                    <font>
+                        <Font name="Tahoma Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="15.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales">
+                    <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                    </font>
+                </Text>
+                <Label fx:id="sales" layoutX="19.0" layoutY="98.0" prefHeight="18.0" prefWidth="152.0" text="-" textFill="WHITE">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <Text fill="WHITE" layoutX="15.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders">
+                    <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                    </font>
+                </Text>
+                <Label fx:id="totalOrder" layoutX="21.0" layoutY="152.0" prefHeight="18.0" prefWidth="152.0" text="-" textFill="WHITE">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <Text fill="WHITE" layoutX="15.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Most Sold Product">
+                    <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                    </font>
+                </Text>
+                <Label fx:id="produkModus" layoutX="21.0" layoutY="209.0" prefHeight="18.0" prefWidth="152.0" text="-" textFill="WHITE">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <Text fill="WHITE" layoutX="15.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer of the Month">
+                    <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                    </font>
+                </Text>
+                <Label fx:id="custModus" layoutX="21.0" layoutY="269.0" prefHeight="18.0" prefWidth="152.0" text="-" textFill="WHITE">
+                    <font>
+                        <Font name="Tahoma" size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="64.0" fitWidth="43.0" layoutX="9.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../ImageResource/fast-food.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <TableView fx:id="TabelOrder" maxWidth="-Infinity" prefHeight="375.0" prefWidth="484.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="ColumnId" prefWidth="48.000001311302185" text="ID" />
+                <TableColumn fx:id="ColumnCus" prefWidth="110.66664505004883" text="Customer" />
+                <TableColumn fx:id="ColumnProduk" prefWidth="88.6666259765625" text="Product" />
+                <TableColumn fx:id="ColumnStaff" prefWidth="88.66664123535156" text="Staff" />
+                <TableColumn fx:id="ColumnDate" prefWidth="120.0" text="Order Date" />
+            </columns>
+        </TableView>
+    </right>
+</BorderPane>
