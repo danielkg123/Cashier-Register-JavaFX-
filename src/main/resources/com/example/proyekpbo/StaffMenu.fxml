@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyekpbo.AdminController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Menu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onPelangganClick" text="Add Customer" />
+                        <MenuItem mnemonicParsing="false" onAction="#onProdukCLick" text="Add Product" />
+                        <MenuItem mnemonicParsing="false" onAction="#onOrderClick" text="Order" />
+                        <MenuItem mnemonicParsing="false" onAction="#onAccClick" text="Account" />
+                        <MenuItem mnemonicParsing="false" onAction="#onLogOutClick" text="Log Out" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D2042D;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="219.0" fitWidth="244.0" layoutX="46.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../ImageResource/pizza.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="296.0" layoutY="107.0" prefHeight="55.0" prefWidth="244.0" text="Welcome" textFill="WHITE">
+                    <font>
+                        <Font name="Broadway" size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="292.0" layoutY="218.0" prefHeight="55.0" prefWidth="253.0" text="Fast Food" textFill="WHITE">
+                    <font>
+                        <Font name="Broadway" size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="397.0" layoutY="169.0" prefHeight="41.0" prefWidth="44.0" text="to" textFill="WHITE">
+                    <font>
+                        <Font name="Broadway" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
